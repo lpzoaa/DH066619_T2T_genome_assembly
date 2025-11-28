@@ -1,4 +1,4 @@
-# OnionGapPatch
+# Onion Gap Patch
 [![Snakemake](https://img.shields.io/badge/Snakemake-Workflow-blue.svg)](https://snakemake.github.io)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/Platform-Linux%20%7C%20HPC-orange.svg)]()
@@ -6,17 +6,6 @@
 A Snakemake-based pipeline for efficient **gap patching** in very large plant genomes.
 The workflow is designed for assemblies where whole-genome alignment is computationally prohibitive.
 Instead of aligning all contigs to entire chromosomes, the pipeline adopts a **contig-end anchoring + candidate enrichment** strategy to identify high-confidence gap-bridging contigs.
-
-## Table of Contents
-- Overview
-- Key Features
-- Workflow Summary
-- Installation
-- Configuration
-- Run the Pipeline
-- Output
-- Citation
-- Contact
 
 ## Overview
 Gap patching for large eukaryotic genomes is computationally demanding due to:
