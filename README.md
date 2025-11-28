@@ -1,22 +1,11 @@
-# DH066619-T2T genome assembly
+# LG-Patch（Large Genome Patch）
 [![Snakemake](https://img.shields.io/badge/Snakemake-Workflow-blue.svg)](https://snakemake.github.io)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-## LG-Patch（Large Genome Patch）
+## Overview
 A Snakemake-based pipeline for efficient **gap patching** in large genomes.
 The workflow was developed to address the prohibitive computational cost of performing whole-genome alignments on exceptionally large genomes while reducing misalignments caused by abundant repetitive sequences.
 Instead of aligning all contigs to entire chromosomes, the pipeline adopts a **contig-end anchoring + candidate enrichment** strategy to identify high-confidence gap-bridging contigs.
-
-## Overview
-Gap patching for large  genomes is computationally demanding due to:
-- high memory and runtime requirements for chromosome-level alignment
-- large numbers of repetitive alignments that obscure true patching candidates
-- 
-
-**LG-Patch** 
-- Works efficiently on plant genomes reaching tens of gigabases  
-- Localized alignment strategy massively reduces computation  
-- Modular, reproducible Snakemake workflow  
 
 ## Installation
 Clone repository:
