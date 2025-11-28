@@ -1,29 +1,21 @@
-# Onion Gap Patch
+# DH066619-T2T genome assembly
 [![Snakemake](https://img.shields.io/badge/Snakemake-Workflow-blue.svg)](https://snakemake.github.io)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![Platform](https://img.shields.io/badge/Platform-Linux%20%7C%20HPC-orange.svg)]()
 
-A Snakemake-based pipeline for efficient **gap patching** in very large plant genomes.
-The workflow is designed for assemblies where whole-genome alignment is computationally prohibitive.
+## LG-Patch（Large Genome Patch）
+A Snakemake-based pipeline for efficient **gap patching** in large genomes.
+The workflow was developed to address the prohibitive computational cost of performing whole-genome alignments on exceptionally large genomes while reducing misalignments caused by abundant repetitive sequences.
 Instead of aligning all contigs to entire chromosomes, the pipeline adopts a **contig-end anchoring + candidate enrichment** strategy to identify high-confidence gap-bridging contigs.
 
 ## Overview
-Gap patching for large eukaryotic genomes is computationally demanding due to:
+Gap patching for large  genomes is computationally demanding due to:
 - high memory and runtime requirements for chromosome-level alignment
 - large numbers of repetitive alignments that obscure true patching candidates
+- 
 
-**OnionGapPatch** solves this by introducing:
-1. **Contig-end extraction**  
-2. **Candidate enrichment** using positional logic  
-3. **Per-chromosome patching**  
-4. **Two-round scaffolding**  
-   - Round 1: HiFi/ONT hybrid unitigs  
-   - Round 2: ONT-only contigs  
-
-## Key Features
+**LG-Patch** 
 - Works efficiently on plant genomes reaching tens of gigabases  
 - Localized alignment strategy massively reduces computation  
-- Perl scripts for contig-end extraction, enrichment, PAF filtering, and AGP manipulation  
 - Modular, reproducible Snakemake workflow  
 
 ## Installation
@@ -52,9 +44,3 @@ snakemake -s gap_patching.smk --cores 32
 - gap-patched chromosomes  
 - updated AGP  
 - final merged genome  
-
-## Citation
-If you use this workflow, please cite this repository.
-
-## Contact
-pp l
