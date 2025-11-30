@@ -123,7 +123,7 @@ You need:
 
 ---
 
-# **1. Candidate contig anchoring & enrichment (whole genome)**
+## **1. Candidate contig anchoring & enrichment (whole genome)**
 
 This step uses contig-end regions as anchors to determine which contigs are useful for gap patching.
 
@@ -145,7 +145,7 @@ Output:
 
 ---
 
-# **2. Extract enriched contigs**
+## **2. Extract enriched contigs**
 ```bash
 mkdir -p round1/ref
 cat <chr.list>|while read f
@@ -168,11 +168,10 @@ done
 
 ---
 
-# **3. Run ragtag patching for each chromosome**
+## **3. Run ragtag patching for each chromosome**
 
 Example for chromosome `Chr1`:
 
-## **Round 1 ragtag patching**
 ```bash
 ragtag.py patch \
   --debug \
@@ -194,7 +193,7 @@ Output:
 
 ---
 
-# **4. Filter alignments by DE**
+## **4. Filter alignments by DE**
 ```bash
 perl filter_paf_by_de.pl round1/Chr1_round1/ragtag.patch.asm.paf > filtered.paf
 mv filtered.paf round1/Chr1_round1/ragtag.patch.asm.paf
@@ -202,7 +201,7 @@ mv filtered.paf round1/Chr1_round1/ragtag.patch.asm.paf
 
 ---
 
-# **5. Rerun ragtag  (reuse filtered alignments)**
+## **5. Rerun ragtag  (reuse filtered alignments)**
 
 ```bash
 ragtag.py patch \
@@ -228,10 +227,10 @@ Repeat steps 3–5 for all chromosomes.
 
 ---
 
-# 📌 Notes
+## 📌 Notes
 - Contig enrichment is performed **before** chromosome splitting.  
 
 
 
-## Contacts
+# Contacts
 Pengzheng Lei(lpz@mail.nwpu.edu.cn)
