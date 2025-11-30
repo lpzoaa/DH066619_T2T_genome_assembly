@@ -1,0 +1,30 @@
+# Original scaffold-level assembly (corresponding to raw_agp)
+raw_genome: "DH066619_2.FINAL.split.fa"
+raw_agp: "DH066619_2.FINAL.agp"
+
+# Contigs used for Round 1 (formerly utg / HiFi unitigs)
+utg_ctg: "DH066619.utg.fa"
+
+# ONT contigs used for Round 2
+ont_ctg: "DH.ont.fa"
+
+# PTG used in Round 1 (reference contig-level FASTA used for patching)
+# This is typically the contig-level version of raw_genome; if identical, specify the same file.
+ptg_round1: "DH066619.hap1.1000.fa"
+
+# Chromosome / scaffold ID list (must match column 1 of the AGP file)
+# One ID per line, e.g.:
+#   Chr1
+#   Chr2
+#   ...
+chr_list: "chr.list"
+
+# Number of threads used by minimap2 / ragtag
+#threads: 32
+
+# Threshold parameters for gap_patch_candidate_enrichment.pl
+de_utg_threshold: 0.001
+de_ont_threshold: 0.01
+ms_threshold: 15000
+max_gap_margin: 5000000
+

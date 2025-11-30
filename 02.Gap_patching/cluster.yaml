@@ -1,0 +1,20 @@
+localrules: all
+__default__:
+  queue: "xhhcnormal"
+  workdir: "./"
+  nCPUs: 4
+  name: "gap_patching"
+  output: "logs/{rule}.{wildcards}.out"
+  error: "logs/{rule}.{wildcards}.err"
+
+ragtag_round1:
+  nCPUs: 32
+
+ragtag_round2:
+  nCPUs: 32
+
+gap_candidates_round1:
+  nCPUs: 32
+
+gap_candidates_round2:
+  nCPUs: 32
