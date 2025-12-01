@@ -76,6 +76,7 @@ mkdir -p logs
     --keep-going \
     --cluster "sbatch -p {cluster.queue} -c {cluster.nCPUs} -n 1 -N 1 -o {cluster.output} -e {cluster.error}" 
 ```
+<img width="536" height="1115" alt="rulegraph" src="https://github.com/user-attachments/assets/f1b8d6a8-e851-498e-8080-d63224d698f4" />
 
 ## Notes
 
